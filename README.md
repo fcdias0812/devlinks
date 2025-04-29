@@ -101,7 +101,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar
 
 ## 📧 Contato
 
-Para mais informações, entre em contato através do email: seu-email@exemplo.com
+Para mais informações, entre em contato através do email: dias.fabricio0812@gmail.com
 
 ---
 
