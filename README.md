@@ -1,54 +1,108 @@
-# React + TypeScript + Vite
+# DevLink
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido durante o curso do [Sujeito Programador](https://sujeitoprogramador.com/) ministrado por Matheus Fraga.
 
-Currently, two official plugins are available:
+Uma aplicação web moderna para gerenciamento de links e redes sociais, desenvolvida com React, TypeScript e Firebase.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Preview
 
-## Expanding the ESLint configuration
+<div align="center">
+  <img src="./src/assets/home.png" alt="Preview Página Home" width="800"/>
+  <br/> <br/>
+  <img src="./src/assets/admin.png" alt="Preview Página Admin" width="800"/>
+  <br/> <br/>
+  <img src="./src/assets/social.png" alt="Preview Página Social" width="800"/>
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tecnologias Utilizadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- React
+- TypeScript
+- Firebase (Authentication, Firestore)
+- React Router
+- React Toastify
+- Tailwind CSS
+
+## 📋 Funcionalidades
+
+- Autenticação de usuários
+- Dashboard administrativo
+- Gerenciamento de links
+- Gerenciamento de redes sociais
+- Interface responsiva
+- Notificações toast
+
+## 🛠️ Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/fcdias0812/devlinks.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instale as dependências:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+3. Inicie o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/     # Componentes reutilizáveis
+├── pages/         # Páginas da aplicação
+│   ├── admin/     # Dashboard administrativo
+│   ├── home/      # Página inicial
+│   ├── login/     # Página de login
+│   └── networks/  # Gerenciamento de redes sociais
+├── routes/        # Configuração de rotas
+├── services/      # Serviços (Firebase, etc)
+└── types/         # Definições de tipos TypeScript
+```
+
+## 🔒 Autenticação
+
+A aplicação utiliza Firebase Authentication para gerenciar o acesso dos usuários. As rotas protegidas são acessíveis apenas após o login.
+
+## 🎨 Estilização
+
+O projeto utiliza Tailwind CSS para estilização, proporcionando uma interface moderna e responsiva.
+
+## 📱 Responsividade
+
+A aplicação é totalmente responsiva, adaptando-se a diferentes tamanhos de tela.
+
+## 🔄 Deploy
+
+Para fazer o deploy da aplicação:
+
+1. Construa o projeto:
+
+```bash
+npm run build
+```
+
+2. O diretório `dist` será gerado com os arquivos otimizados para produção.
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👥 Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+
+## 📧 Contato
+
+Para mais informações, entre em contato através do email: seu-email@exemplo.com
+
+---
+
+Desenvolvido como parte do curso do [Sujeito Programador](https://sujeitoprogramador.com/)
