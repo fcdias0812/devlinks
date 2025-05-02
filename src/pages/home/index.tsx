@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Social } from "../../components/Social";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaBriefcase } from "react-icons/fa";
 import { db } from "../../services/firebaseConnection";
 import {
   getDocs,
@@ -22,6 +22,7 @@ interface LinkProps {
 interface SocialLinksProps {
   github: string;
   linkedin: string;
+  portfolio: string;
 }
 
 export function Home() {
@@ -66,6 +67,7 @@ export function Home() {
           setSocialLinks({
             github: snapshot.data()?.github,
             linkedin: snapshot.data()?.linkedin,
+            portfolio: snapshot.data()?.portfolio,
           });
         }
       } catch (error) {
@@ -104,9 +106,9 @@ export function Home() {
             <Social url={socialLinks?.linkedin}>
               <FaLinkedin size={35} color="#fff" />
             </Social>
-            {/* <Social url="portfolio-link">
-            <FaBriefcase size={35} color="#fff" />
-          </Social> */}
+            <Social url={socialLinks?.portfolio}>
+              <FaBriefcase size={35} color="#fff" />
+            </Social>
           </footer>
         )}
       </main>

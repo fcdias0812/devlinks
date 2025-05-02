@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 export function Networks() {
   const [github, setGithub] = useState("");
   const [linkedin, setLinkedin] = useState("");
-  // const [portfolio, setPortfolio] = useState("")
+  const [portfolio, setPortfolio] = useState("");
 
   useEffect(() => {
     async function loadLinks() {
@@ -20,6 +20,7 @@ export function Networks() {
         if (snapshot.data()) {
           setGithub(snapshot.data()?.github);
           setLinkedin(snapshot.data()?.linkedin);
+          setPortfolio(snapshot.data()?.portfolio);
         }
       } catch (error) {
         console.log(error);
@@ -36,6 +37,7 @@ export function Networks() {
       await setDoc(doc(db, "social", "link"), {
         github: github,
         linkedin: linkedin,
+        portfolio: portfolio,
       });
       toast.success("Links alterados com sucesso!");
     } catch (error) {
@@ -70,6 +72,15 @@ export function Networks() {
           placeholder="Digite a URL do LinkedIn"
           value={linkedin}
           onChange={(e) => setLinkedin(e.target.value)}
+        />
+        <label className="text-white font-medium mt-2 mb-2">
+          Link do Portfolio
+        </label>
+        <Input
+          type="url"
+          placeholder="Digite a URL do portfolio"
+          value={portfolio}
+          onChange={(e) => setPortfolio(e.target.value)}
         />
 
         <button
